@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header {
+    background-color: #f2f2f2;
+}
+main-container {
+    padding: 10px 40px;
+    width: min(100% , 1200px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header ul {
+    display: flex;
+    gap: 40px
+}
+header ul li {
+    list-style: none;
+}
+header ul li a {
+    text-decoration: none;
+    color: #34343499;
+    font-size: clamp(.75rem, 1.5vw, 1.25rem);
+}
+header ul li:first-child a {
+    color: #343434;
+    border-bottom: 1px solid #343434
+}
+header ul li a:hover {
+    color: #343434;
+}
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 60px 40px;
+    width: min(100% , 1200px);
+    margin: 0 auto;
+}
+section div {
+    width: calc(calc(100% - 50px) / 3);
+    height: 300px;
+    cursor: pointer;
+    overflow: hidden;
+}
+section div img {
+    max-width: 100%;
+    height: 100%;
+    transition: transform linear 500ms, filter linear 500ms;
+    -webkit-transition: transform linear 500ms, filter linear 500ms;
+    -moz-transition: transform linear 500ms, filter linear 500ms;
+    -ms-transition: transform linear 500ms, filter linear 500ms;
+    -o-transition: transform linear 500ms, filter linear 500ms;
+}
+section div:hover img{
+    transform: scale(110%, 110%);
+    -webkit-transform: scale(110%, 110%);
+    -moz-transform: scale(110%, 110%);
+    -ms-transform: scale(110%, 110%);
+    -o-transform: scale(110%, 110%);
+    filter:brightness(50%);
+    -webkit-filter:brightness(70%);
+}
+.main-icon {
+    display: none;
+}
+footer {
+    background-color: #343434;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+footer span { 
+    padding: 0 5px
+}
+footer a {
+    color: lightskyblue
+}
+footer a:hover {
+    text-decoration: none;
+    color: gray
+}
+@media(max-width:767px) {
+    section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    nav {
+        display: none;
+    }
+    .main-icon {
+        display: block;
+        width: 6vw
+    }
+    section div {
+        width: 450px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    section div {
+        width: calc(calc(100% - 25px) / 2);
+    }
+}
